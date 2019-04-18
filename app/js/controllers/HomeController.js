@@ -9,3 +9,4 @@ app.controller('HomeController', ['$scope', 'photos', function($scope, crypto) {
   	$scope.crypto.bpi[index].rate = 1; 
 	};
   }]);
+

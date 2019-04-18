@@ -1,31 +1,30 @@
 <section>
-    <div class="container">
-  
-      <h2>{{ crypto.disclaimer }}</h2>
-      <div class="row">
+  <div class="container">
+
+    <h2>{{ crypto.disclaimer }}</h2>
+    <div class="row">
       <div class="col-xs-4">
-       <p>Updated - {{ crypto.time.updated | date }} </p>
+        <p>Updated - {{ crypto.time.updated | date }} </p>
       </div>
       <div class="col-xs-4">
-          <p>Updated ISO - {{ crypto.time.updatedISO | date }} </p>
-        </div>
-        <div class="col-xs-4">
-            <p> Updated UK - {{ crypto.time.updateduk | date }} </p>
-          </div>
+        <p>Updated ISO - {{ crypto.time.updatedISO | date }} </p>
       </div>
-      <div class="row">
-        <div class="item col" ng-repeat="data in crypto.bpi">
-            <a href="#/photos/{{data.code}}">
-            <h3 class="author"> {{  data.code }}</h3>
-            </a>
-            <p> {{  data.rate }} </p>
-            <p class="likes" ng-click="plusOne(data.code)">+ </p>
-            <p class="dislikes" ng-click="minusOne(data.code)">-</p>
-        </div>
+      <div class="col-xs-4">
+        <p> Updated UK - {{ crypto.time.updateduk | date }} </p>
       </div>
-  
     </div>
-  </section>
-  
-  
-  
+    <div class="row">
+      <div class=" col-xs-4" ng-repeat="data in crypto.bpi">
+        <div class="item">
+          <a href="#/photos/{{data.code}}">
+            <h3 class="author"> {{  data.code }}</h3>
+          </a>
+          <p> {{  data.rate }} </p>
+          <p class="likes" ng-click="plusOne(data.code)">+ </p>
+          <p class="dislikes" ng-click="minusOne(data.code)">-</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
