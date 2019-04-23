@@ -1,8 +1,12 @@
     <div class="container item">
+   
        <h1> {{detail.symbol }}  </h1>
       <h2 class="photo-title"> {{detail.code}} </h2>
       <p class="photo-author"> {{detail.description}} </p>
       <p class="photo-views"> {{detail.rate}} </p>
-      <p class="photo-upvotes"> {{detail.rate_float}} </p>
+      <p class="photo-upvotes"> {{detail.rate_float + test}} </p>
+      <label> Add some numbers or letters here: </label>
+      <input ng-model="test">
+      <h4>{{myUrl}}</h4>
     </div>
   

@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="row">
-      <div class=" col-xs-4" ng-repeat="data in crypto.bpi">
+      <div class=" col-xs-4" ng-repeat="data in crypto.bpi ">
         <div class="item">
           <a href="#/photos/{{data.code}}">
             <h3 class="author"> {{  data.code }}</h3>
@@ -23,6 +23,12 @@
           <p class="likes" ng-click="plusOne(data.code)">+ </p>
           <p class="dislikes" ng-click="minusOne(data.code)">-</p>
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h3>Fancy changing the disclaimer?</h3>
+        <button ng-click="changeName()">Click Me!</button>
       </div>
     </div>
 

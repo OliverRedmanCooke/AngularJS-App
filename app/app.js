@@ -11,6 +11,7 @@ app.config(function ($routeProvider) {
       templateUrl: 'views/photo.html' 
     }) 
     .otherwise({ 
-      redirectTo: '/' 
+      controller: 'RedirectController', 
+      templateUrl: 'views/redirect.html' 
     }); 
 }); 
