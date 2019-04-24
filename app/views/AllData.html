@@ -1,16 +1,29 @@
 <section>
   <div class="container">
     <div class="row">
-        <table  class="table table-striped">
-            <tr ng-repeat="data in crypto.bpi">
-              <td>{{  data.code }}</td>
-              <td> {{  data.rate }} </td>
-              <td> {{  data.rate }} </td>
-              <td>  {{data.description}} </td> 
-              <td>{{data.rate_float}} </td>
-            </tr>
-          </table>
-          </div>          
+      <table class="table table-striped">
+        <tr ng-repeat="data in crypto.bpi">
+          <td>{{ $index + 1 }}</td>
+          <td>{{  data.code }}</td>
+          <td> {{  data.rate }} </td>
+          <td> {{data.description | uppercase}} </td>
+          <td>{{data.rate_float}} </td>
+        </tr>
+      </table>
     </div>
   </div>
+  </div>
+
+  <select ng-model="selectedData">
+    <option ng-repeat="data in crypto.bpi">{{data.code}}</option>
+  </select>
+
+  <h1>You selected: {{selectedData}}</h1>
+
+  <select ng-model="selectedObject"  ng-options="x for (x, y) in crypto.bpi">
+    </select>
+    
+    <h1>You selected: {{selectedObject.description}}</h1>
+
+
 </section>
