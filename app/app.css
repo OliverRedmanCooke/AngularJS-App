@@ -15,12 +15,22 @@ section {
   background-color: #f0f2f5;
 }
 
+.all-data{
+  padding-top: 30px; 
+}
+
 section h2 {
   padding: 20px 0px 20px 0px;
   text-align: center;
   border-bottom: 1px solid grey;
   margin-bottom: 20px;
 }
+
+section .mx-auto {
+  margin: 20px 0px 20px 0px;
+  text-align: center;
+}
+
 
 .item {
   height: 100%;
@@ -60,4 +70,13 @@ section h2 {
   color: #F65A5B;
   background: rgba(246, 90, 91, 0.25);
   transition: background 500ms;
+}
+
+.row span {
+  display: flex;
+    align-items: baseline;
+}
+
+.row span input { 
+  margin: 0px 0px 0px 10px;
 }

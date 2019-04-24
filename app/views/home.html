@@ -3,7 +3,6 @@
 
     <h2>{{ crypto.disclaimer }}
     </h2>
-    <a href="#/all-data"><button>View All</button></a>
     <div class="row">
       <div class="col-xs-4">
         <p>Updated - {{ crypto.time.updated | date }} </p>
@@ -27,10 +26,18 @@
         </div>
       </div>
     </div>
+    <div class="mx-auto">
+      <a href="#/all-data"><button type="button" class="btn btn-secondary">View All</button></a>
+    </div>
     <div class="row">
       <div class="col">
-        <span> <h3>Fancy changing the disclaimer?</h3> <input type="checkbox" ng-model="mySwitch"/> <p>{{mySwitch}}</p> </span>
-        <button ng-disabled="mySwitch" ng-click="changeName()">Click Me!</button>
+        <span>
+          <h3>Fancy changing the disclaimer?</h3> <input type="checkbox" ng-model="mySwitch" />
+          <p>{{mySwitch}}</p>
+        </span>
+        <div class="mx-auto">
+        <button type="button" class="btn btn-dark" ng-disabled="mySwitch" ng-click="changeName()">Click Me!</button>
+        </div>
       </div>
     </div>
 
