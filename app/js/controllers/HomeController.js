@@ -11,6 +11,8 @@ app.controller('HomeController', ['$scope', 'photos', function($scope, crypto) {
   $scope.changeName = function() {
     $scope.crypto.disclaimer = "You can do whatever you want";
   }
-  
+  $scope.mySwitch = true;
+
+
   }]);
 

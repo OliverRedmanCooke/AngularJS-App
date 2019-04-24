@@ -15,15 +15,16 @@
   </div>
 
   <select ng-model="selectedData">
-    <option ng-repeat="data in crypto.bpi">{{data.code}}</option>
+    <option ng-repeat="data in crypto.bpi" value="{{data.code}}">{{data.code}}</option>
   </select>
 
   <h1>You selected: {{selectedData}}</h1>
 
-  <select ng-model="selectedObject"  ng-options="x for (x, y) in crypto.bpi">
-    </select>
-    
-    <h1>You selected: {{selectedObject.description}}</h1>
+
+  <select ng-model="selectedObject" ng-options="x for (x, y) in crypto.bpi.EUR">
+  </select>
+
+  <h1>You selected: {{selectedObject}}</h1>
 
 
 </section>

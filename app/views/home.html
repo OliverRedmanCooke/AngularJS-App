@@ -29,8 +29,8 @@
     </div>
     <div class="row">
       <div class="col">
-        <h3>Fancy changing the disclaimer?</h3>
-        <button ng-click="changeName()">Click Me!</button>
+        <span> <h3>Fancy changing the disclaimer?</h3> <input type="checkbox" ng-model="mySwitch"/> <p>{{mySwitch}}</p> </span>
+        <button ng-disabled="mySwitch" ng-click="changeName()">Click Me!</button>
       </div>
     </div>
 
